@@ -1,10 +1,7 @@
-from memory.space import Bank, Write
 import instruction.field as field
+from memory.space import Bank, Write
 from objectives._cached_function import _CachedFunction
 
-import data.event_bit as event_bit
-import data.battle_bit as battle_bit
-import data.event_word as event_word
 
 class _Condition(_CachedFunction, field.Call):
     def __init__(self, *args, **kwargs):

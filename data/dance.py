@@ -1,5 +1,6 @@
 import data.text as text
 
+
 class Dance:
     def __init__(self, id, data, name_data):
         self.id = id

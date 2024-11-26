@@ -2,7 +2,8 @@ def __init__():
     from data.dialogs.dialogs import Dialogs
     dialogs = Dialogs()
 
-    import sys, inspect
+    import inspect
+    import sys
     module = sys.modules[__name__]
     for name, member in inspect.getmembers(dialogs, inspect.ismethod):
         if not name.startswith('_'):

@@ -1,10 +1,9 @@
-from memory.space import START_ADDRESS_SNES, Bank, Write
-import instruction.asm as asm
-import instruction.f0 as f0
-import instruction.c3 as c3
-
-from enum import IntEnum
 from collections import namedtuple
+
+import instruction.asm as asm
+import instruction.c3 as c3
+import instruction.f0 as f0
+from memory.space import START_ADDRESS_SNES, Bank, Write
 
 WIDTH = 26  # max characters per row
 HEIGHT = 10 # rows visible on screen

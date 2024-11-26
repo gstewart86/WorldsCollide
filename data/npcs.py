@@ -1,5 +1,6 @@
 from data.npc import NPC
 
+
 class NPCs():
     NPC_COUNT = 2192
     DATA_START_ADDR = 0x041d52

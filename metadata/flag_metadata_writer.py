@@ -1,5 +1,4 @@
 from argparse import _StoreTrueAction
-import json
 
 blacklisted_args = [
     'help',
@@ -72,8 +71,9 @@ class FlagMetadataWriter:
         return val
 
     def write(self):
-        import args
         import json
+
+        import args
         file_name = f"{args.output_file}"
         with open(file_name, "w") as out_file:
             out_file.write(json.dumps(self.get_flag_metadata(), indent = 4))

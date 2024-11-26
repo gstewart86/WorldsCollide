@@ -1,12 +1,11 @@
-from memory.space import Bank, START_ADDRESS_SNES, Write
-import instruction.asm as asm
-import instruction.field as field
-
+import data.dialogs as dialogs
 import data.event_bit as event_bit
 import data.event_word as event_word
-import data.dialogs as dialogs
-
+import instruction.asm as asm
+import instruction.field as field
+from memory.space import START_ADDRESS_SNES, Bank, Write
 from objectives._cached_function import _CachedFunction
+
 
 class Field(_CachedFunction, field.Call):
     def __init__(self, *args, **kwargs):

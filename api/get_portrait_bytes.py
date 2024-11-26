@@ -6,8 +6,8 @@ def get_portrait_bytes(portrait_id):
 
 def get_rgb_bytes(portrait_path, palette_path):
     from graphics.palette_file import PaletteFile
-    from graphics.sprite_file import SpriteFile
     from graphics.poses import PORTRAIT
+    from graphics.sprite_file import SpriteFile
     palette = PaletteFile(palette_path)
 
     sprite = SpriteFile(portrait_path, palette)

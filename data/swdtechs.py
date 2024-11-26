@@ -1,8 +1,8 @@
-from data.swdtech import SwdTech
-from data.structures import DataArray
-
-from memory.space import Bank, Reserve, Allocate, Write
 import instruction.asm as asm
+from data.structures import DataArray
+from data.swdtech import SwdTech
+from memory.space import Allocate, Bank, Reserve, Write
+
 
 class SwdTechs:
     NAMES_START = 0x0f3c40
@@ -44,8 +44,8 @@ class SwdTechs:
         self.is_learner_function = space.start_address_snes
 
     def event_check_mod(self):
-        from memory.space import START_ADDRESS_SNES
         import instruction.c0 as c0
+        from memory.space import START_ADDRESS_SNES
 
         learn_swdtechs = 0x0a1da
         character_recruited = c0.character_recruited + START_ADDRESS_SNES

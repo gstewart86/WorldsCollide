@@ -1,6 +1,7 @@
 results = {}
 def __init__():
-    import os, importlib
+    import importlib
+    import os
     for module_file in os.listdir(os.path.dirname(__file__)):
         if module_file[0] == '_' or module_file[-3:] != ".py":
             continue

@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class NarsheWOB(Event):
     def name(self):
         return "Narshe WOB"

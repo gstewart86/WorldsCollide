@@ -1,4 +1,6 @@
-from enum import Flag, unique, auto
+from enum import Flag, auto, unique
+
+
 @unique
 class RewardType(Flag):
     NONE = auto()

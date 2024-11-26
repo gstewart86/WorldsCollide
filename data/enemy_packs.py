@@ -1,6 +1,7 @@
-from data.enemy_pack import EnemyPack4, EnemyPack2
-from data.structures import DataArray
 import data.bosses as bosses
+from data.enemy_pack import EnemyPack2, EnemyPack4
+from data.structures import DataArray
+
 
 class EnemyPacks():
     # the first 256 enemy packs are groups of 4 formations -- these are the Battle -> "Random Battle Groups" in ff6tools
@@ -146,8 +147,11 @@ class EnemyPacks():
         self.phunbaba3_safety_check(bosses_to_replace)
 
     def randomize_event_bosses(self):
-        import args, random, objectives
-        from constants.objectives.conditions import names as possible_condition_names
+        import random
+
+        import objectives
+        from constants.objectives.conditions import \
+            names as possible_condition_names
 
         boss_condition_name = "Boss"
         dragon_condition_name = "Dragon"

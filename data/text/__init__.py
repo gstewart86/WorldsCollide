@@ -1,4 +1,6 @@
 from enum import Enum
+
+
 class TextType(Enum):
     TEXT1 = 1
     TEXT2 = 2

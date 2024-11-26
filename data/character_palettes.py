@@ -96,7 +96,8 @@ class CharacterPalettes:
                 self.menu_character_sprites.set_palette(character, palette_id)
 
     def mod_portrait_palettes(self):
-        from data.character_sprites import PORTRAIT_CHARACTERS, DEFAULT_CHARACTER_PORTRAITS
+        from data.character_sprites import (DEFAULT_CHARACTER_PORTRAITS,
+                                            PORTRAIT_CHARACTERS)
 
         for index, portrait_palette_file in enumerate(self.args.portrait_palette_files):
             if self.args.portrait_ids[index] != DEFAULT_CHARACTER_PORTRAITS[index]:

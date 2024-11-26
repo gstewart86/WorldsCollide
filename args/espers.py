@@ -11,8 +11,8 @@ def name():
     return "Espers"
 
 def parse(parser):
-    from data.esper import Esper
     from data.characters import Characters
+    from data.esper import Esper
     espers = parser.add_argument_group("Espers")
 
     esper_start = espers.add_mutually_exclusive_group()

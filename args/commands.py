@@ -1,4 +1,7 @@
-from constants.commands import COMMAND_OPTIONS, RANDOM_COMMAND, RANDOM_UNIQUE_COMMAND, NONE_COMMAND, RANDOM_EXCLUDE_COMMANDS, id_name, name_id
+from constants.commands import (COMMAND_OPTIONS, NONE_COMMAND, RANDOM_COMMAND,
+                                RANDOM_EXCLUDE_COMMANDS, RANDOM_UNIQUE_COMMAND,
+                                id_name, name_id)
+
 
 def name():
     return "Commands"

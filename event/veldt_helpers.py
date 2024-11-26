@@ -1,6 +1,7 @@
 import data.event_bit as event_bit
 import instruction.asm as asm
 
+
 def ram_event_byte(event):
     return 0x1e80 + event_bit.byte(event)
 

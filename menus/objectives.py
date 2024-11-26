@@ -1,10 +1,9 @@
-from memory.space import Bank, Write
 import instruction.asm as asm
 import instruction.f0 as f0
-import args
-
-import objectives
 import menus.pregame_track_scroll_area as scroll_area
+import objectives
+from memory.space import Bank, Write
+
 
 class Objectives(scroll_area.ScrollArea):
     MENU_NUMBER = 11

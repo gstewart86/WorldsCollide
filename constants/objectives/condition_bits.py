@@ -1,9 +1,10 @@
+from collections import namedtuple
+
+import data.battle_bit as battle_bit
 import data.event_bit as event_bit
 import data.npc_bit as npc_bit
-import data.battle_bit as battle_bit
-from data.bosses import normal_formation_name, dragon_formation_name
+from data.bosses import dragon_formation_name, normal_formation_name
 
-from collections import namedtuple
 NameBit = namedtuple("NameBit", ["name", "bit"])
 
 check_bit = [

@@ -1,10 +1,11 @@
-from memory.space import Bank, Reserve, Write, Read
-from instruction.event import _Instruction
+from enum import IntEnum
+
 import instruction.asm as asm
 import instruction.c0 as c0
-
-from enum import IntEnum
+from instruction.event import _Instruction
 from instruction.field.custom import _set_opcode_address
+from memory.space import Bank, Write
+
 
 # set graphics for last npc interacted with using y button
 # if sprite, palette, or vehicle argument is 0xff, they will remain unmodified (TODO: 0xff restore original values?)

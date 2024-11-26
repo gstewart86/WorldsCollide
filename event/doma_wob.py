@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class DomaWOB(Event):
     def name(self):
         return "Doma WOB"

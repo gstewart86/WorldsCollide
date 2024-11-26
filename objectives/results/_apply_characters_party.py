@@ -1,4 +1,5 @@
 import instruction.asm as asm
+
 character_data_size = 37
 
 def ApplyToCharacters(instructions):

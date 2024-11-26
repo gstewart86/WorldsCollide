@@ -1,6 +1,7 @@
-from memory.space import Bank, START_ADDRESS_SNES, Reserve, Allocate
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import START_ADDRESS_SNES, Allocate, Bank, Reserve
+
 
 class FinalLineupMenu:
     LINEUP_SIZE = 12 # number of characters listed in lineup

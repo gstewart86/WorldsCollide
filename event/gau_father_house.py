@@ -1,6 +1,7 @@
 from event.event import *
 from music.song_utils import get_character_theme
 
+
 class GauFatherHouse(Event):
     def name(self):
         return "Gau Father House"

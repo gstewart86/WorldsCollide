@@ -1,8 +1,9 @@
-from data.spell import Spell
-from data.spell_names import id_name, name_id
 from data.ability_data import AbilityData
+from data.spell import Spell
+from data.spell_names import name_id
 from data.structures import DataArray
 from memory.space import Reserve
+
 
 class Spells:
     BLACK_MAGIC_COUNT = 24
@@ -54,6 +55,7 @@ class Spells:
     def get_replacement(self, spell_id, exclude):
         ''' get a random spell from the same tier as the given spell_id '''
         import random
+
         from data.esper_spell_tiers import tiers
 
         same_tier = next((tier for tier in tiers if spell_id in tier), [])

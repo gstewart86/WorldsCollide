@@ -16,8 +16,8 @@ def get_palette(image):
     return palette
 
 def get_tiles(image):
-    from graphics.sprite_tile import SpriteTile
     import graphics.poses as poses
+    from graphics.sprite_tile import SpriteTile
 
     image_color_indices = image.getdata()
     tile_indices = poses.PORTRAIT
@@ -72,7 +72,8 @@ def convert(image_path):
     write_sprite(output_prefix, sprite, tile_indices)
 
 if __name__ == "__main__":
-    import os, sys
+    import os
+    import sys
     sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
     import argparse

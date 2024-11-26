@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class MoblizWOR(Event):
     def name(self):
         return "Mobliz WOR"

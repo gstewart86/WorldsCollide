@@ -1,5 +1,6 @@
 from objectives.results._objective_result import *
 
+
 def _learn_swdtechs():
     # input: 8 bit number of swdtechs to learn
     # output: learn next given number of swdtechs, skip swdtechs already known

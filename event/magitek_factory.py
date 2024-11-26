@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class MagitekFactory(Event):
     def name(self):
         return "Magitek Factory"

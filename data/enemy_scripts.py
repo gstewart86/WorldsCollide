@@ -1,10 +1,10 @@
+import data.enemy_script_commands as ai_instr
 from data.enemy_script import EnemyScript
+from data.enemy_script_abilities import EnemyScriptAbilities
 from data.enemy_script_custom_commands import EnemyScriptCommands
 from data.enemy_script_dialogs import EnemyScriptDialogs
-from data.enemy_script_abilities import EnemyScriptAbilities
 from data.structures import DataMap
 
-import data.enemy_script_commands as ai_instr
 
 class EnemyScripts():
     SCRIPT_PTRS_START = 0xf8400

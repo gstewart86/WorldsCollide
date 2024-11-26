@@ -1,5 +1,7 @@
-from event.event import *
 import random
+
+from event.event import *
+
 
 class Start(Event):
     def name(self):
@@ -209,8 +211,8 @@ class Start(Event):
             ]
 
         from constants.items import id_name
-        from data.shop_item_tiers import tiers
         from data.item import Item
+        from data.shop_item_tiers import tiers
         junk = []
         junk += tiers[Item.WEAPON][0]
         junk += tiers[Item.SHIELD][0]

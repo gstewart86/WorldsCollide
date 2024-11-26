@@ -1,9 +1,9 @@
-from data.lore import Lore
-from data.ability_data import AbilityData
-from data.structures import DataBits, DataArray, DataList
-
-from memory.space import Bank, Reserve, Allocate, Write, Space
 import instruction.asm as asm
+from data.ability_data import AbilityData
+from data.lore import Lore
+from data.structures import DataArray, DataBits, DataList
+from memory.space import Allocate, Bank, Reserve, Space, Write
+
 
 class Lores:
     LORE_COUNT = 24
@@ -74,8 +74,8 @@ class Lores:
         self.is_learner_function = space.start_address_snes
 
     def after_battle_check_mod(self):
-        from memory.space import START_ADDRESS_SNES
         import instruction.c0 as c0
+        from memory.space import START_ADDRESS_SNES
 
         character_available = START_ADDRESS_SNES + c0.character_available
 
@@ -188,7 +188,8 @@ class Lores:
         return new_desc
 
     def random_lx_levels(self, dialogs):
-        import random, re
+        import random
+        import re
         LX_LORE_IDX = [Lores.L_5_DOOM, Lores.L_4_FLARE, Lores.L_3_MUDDLE, Lores.L_PEARL]
         LQ_EFFECT = 29 # the AbilityData.effect setting for L?
         NO_EFFECT = 255 # The AbilityData.effect setting for no effect

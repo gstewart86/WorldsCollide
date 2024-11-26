@@ -1,7 +1,7 @@
-from memory.space import Bank, START_ADDRESS_SNES, Reserve, Allocate, Write
 import instruction.asm as asm
 import instruction.f0 as f0
-import args
+from memory.space import START_ADDRESS_SNES, Bank, Write
+
 
 class CheckDragonBoss(asm.JSL):
     def __init__(self):

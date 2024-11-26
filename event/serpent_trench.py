@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class SerpentTrench(Event):
     def name(self):
         return "Serpent Trench"

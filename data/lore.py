@@ -1,5 +1,6 @@
-from data.ability_data import AbilityData
 import data.text as text
+from data.ability_data import AbilityData
+
 
 class Lore(AbilityData):
     def __init__(self, id, name_data, ability_data, desc_data):
@@ -16,7 +17,6 @@ class Lore(AbilityData):
         return data
 
     def desc_data(self):
-        from data.lores import Lores
         data = text.get_bytes(self.desc, text.TEXT2)
         return data
 

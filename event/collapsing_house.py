@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class CollapsingHouse(Event):
     def name(self):
         return "Collapsing House"

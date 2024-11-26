@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class DuncanHouseWOB(Event):
     def name(self):
         return "Duncan House WOB"

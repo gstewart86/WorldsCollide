@@ -1,5 +1,6 @@
 from graphics.palette import Palette
 
+
 class PaletteFile(Palette):
     def __init__(self, path):
         self.path = path

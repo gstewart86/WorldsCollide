@@ -1,6 +1,7 @@
-from memory.space import Bank, Reserve, Write
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import Bank, Reserve, Write
+
 
 class Capture:
     def __init__(self):

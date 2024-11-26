@@ -1,5 +1,6 @@
-from objectives.results._objective_result import *
 from data.item_names import name_id as item_name_id
+from objectives.results._objective_result import *
+
 
 class Field(field_result.Result):
     def src(self, lance):

@@ -1,8 +1,9 @@
-from memory.space import Bank, START_ADDRESS_SNES, Reserve, Write, Read
-from instruction.event import _Instruction, _Branch
+
 import instruction.asm as asm
 import instruction.c0 as c0
-from enum import IntEnum
+from instruction.event import _Branch, _Instruction
+from memory.space import START_ADDRESS_SNES, Bank, Read, Reserve, Write
+
 
 def _set_opcode_address(opcode, address):
     FIRST_OPCODE = 0x35

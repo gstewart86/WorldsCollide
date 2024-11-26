@@ -1,5 +1,6 @@
 import data.enemy_script_commands as ai_instr
 
+
 # parse until EndMainLoop or EndScript instructions found
 def parse_section(script, index, InstructionTypes):
     blocks = [[]] # stack of instruction blocks

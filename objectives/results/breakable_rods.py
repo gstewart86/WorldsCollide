@@ -1,5 +1,6 @@
-from objectives.results._objective_result import *
 from constants.items import BREAKABLE_RODS
+from objectives.results._objective_result import *
+
 
 class Field(field_result.Result):
     def src(self):

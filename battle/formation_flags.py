@@ -1,10 +1,9 @@
-from memory.space import Bank, Reserve, Write, Read
+from enum import IntFlag
 
+import args
 import instruction.asm as asm
 import instruction.f0 as f0
-import args
-
-from enum import IntFlag
+from memory.space import Bank, Read, Reserve, Write
 
 formation_address = 0x3ed4
 formation_flags_address = 0x3ecb

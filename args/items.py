@@ -58,8 +58,8 @@ def parse(parser):
 
 
 def process(args):
-    from constants.items import good_items, stronger_items, premium_items
-    from constants.items import id_name, name_id
+    from constants.items import (good_items, name_id, premium_items,
+                                 stronger_items)
 
     args._process_min_max("item_equipable_random")
     if args.item_equipable_balanced_random is not None:

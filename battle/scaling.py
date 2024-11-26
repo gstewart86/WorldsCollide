@@ -1,10 +1,10 @@
-from memory.space import Bank, Reserve, Write, Read
-from battle.scaling_functions import ScalingFunctions
-from battle.formation_flags import FormationFlag, formation_flags_address
-
+import args
 import instruction.asm as asm
 import instruction.c2 as c2
-import args
+from battle.formation_flags import FormationFlag, formation_flags_address
+from battle.scaling_functions import ScalingFunctions
+from memory.space import Bank, Read, Reserve, Write
+
 
 class _Scaling():
     def __init__(self):

@@ -1,7 +1,8 @@
-import logging, os
-from log.format import *
+import logging
+import os
 
 import args
+
 name, ext = os.path.splitext(args.output_file)
 log_file = "{}{}".format(name, ".txt")
 if args.stdout_log:
@@ -12,7 +13,9 @@ else:
 
 hash = ', '.join([entry.name for entry in args.sprite_hash])
 import time
+
 import version
+
 log_msg =  f"Version   {version.__version__}\n"
 log_msg += f"Generated {time.strftime('%Y-%m-%d %H:%M:%S')}\n"
 log_msg += f"Input     {os.path.basename(args.input_file)}\n"
@@ -38,6 +41,7 @@ if not args.hide_flags:
 
 if args.manifest_file:
     import json
+
     from api.get_manifest import get_manifest
     manifest = get_manifest(args.flags, hash, args.seed_id)
     with open(args.manifest_file, "wb") as output:

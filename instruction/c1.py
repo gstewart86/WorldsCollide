@@ -1,5 +1,6 @@
-from memory.space import START_ADDRESS_SNES, Bank, Reserve, Free, Write, Read
 import instruction.asm as asm
+from memory.space import START_ADDRESS_SNES, Bank, Free, Read, Reserve, Write
+
 
 def _color_absolute_addition_mod():
     import instruction.f0 as f0

@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class MtKolts(Event):
     def name(self):
         return "Mt. Kolts"
@@ -149,6 +150,7 @@ class MtKolts(Event):
         self.maps.delete_event(0x62, 11, 32) # vargas event tile (right)
 
         from data.map_event import MapEvent
+
         # add event tile to earlier on the path
         new_event = MapEvent()
         new_event.x = 21

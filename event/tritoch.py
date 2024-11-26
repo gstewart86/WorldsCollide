@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class Tritoch(Event):
     def name(self):
         return "Tritoch"

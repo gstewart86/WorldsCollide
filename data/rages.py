@@ -1,6 +1,7 @@
-from data.rage import Rage
-from data.structures import DataBits, DataArray
 from data.ability_data import AbilityData
+from data.rage import Rage
+from data.structures import DataArray, DataBits
+
 
 class Rages():
     RAGE_COUNT = 256 # 255 available
@@ -50,8 +51,8 @@ class Rages():
             self.init_data[rage_id] = 1
 
     def no_leap(self):
-        from memory.space import Reserve
         import instruction.asm as asm
+        from memory.space import Reserve
 
         space = Reserve(0x23b71, 0x23b8f, "rages leap command", asm.NOP())
         space.add_label("LEAP_MISS", 0x23bc0)
@@ -79,6 +80,7 @@ class Rages():
 
     def no_life(self):
         from data.spell_names import name_id
+
         # change Robite to cure 2 from life
         self.rages[self.RHOBITE_RAGE_ID].attack2 = name_id["Cure 2"]
 

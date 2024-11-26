@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class NarsheWOR(Event):
     def name(self):
         return "Narshe WOR"
@@ -106,6 +107,7 @@ class NarsheWOR(Event):
         space = Reserve(0xc0b24, 0xc0b26, "narshe wor i wanted to give you this", field.NOP())
 
         import data.text
+
         # item names stored as TEXT2, dialogs are TEXT1
         item_name = data.text.convert(self.items.get_name(self.item), data.text.TEXT1)
         self.dialogs.set_text(1519, dialog_first_choice_text + "<line><choice> Make it “" + item_name + "”<end>")

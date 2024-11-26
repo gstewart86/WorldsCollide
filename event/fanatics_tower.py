@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class FanaticsTower(Event):
     def name(self):
         return "Fanatic's Tower"

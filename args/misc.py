@@ -139,7 +139,8 @@ def options(args):
     elif args.y_npc_remove:
         y_npc = "Remove"
 
-    from data.movement import key_name, AUTO_SPRINT
+    from data.movement import AUTO_SPRINT, key_name
+
     # Similar logic is present in the init fn of settings/movement.py
     if args.movement:
         movement = key_name[args.movement]

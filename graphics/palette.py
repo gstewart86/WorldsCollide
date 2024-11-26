@@ -1,5 +1,6 @@
 from graphics.bgr15 import BGR15
 
+
 class Palette:
     def __init__(self, data = None):
         self.colors = []

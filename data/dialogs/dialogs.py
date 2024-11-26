@@ -1,8 +1,9 @@
+import data.text
 from data.dialogs.dialog import Dialog
+from data.fonts import widths
 from data.structures import DataList
 from memory.space import Space
-from data.fonts import widths
-import data.text
+
 
 class Dialogs():
     DIALOG_PTRS_START = 0xce602
@@ -143,7 +144,8 @@ class Dialogs():
         return (" " * left_spaces) + string
 
     def move_battle_messages(self):
-        from memory.space import START_ADDRESS_SNES, Bank, Reserve, Allocate, Free
+        from memory.space import (START_ADDRESS_SNES, Allocate, Bank, Free,
+                                  Reserve)
         space = Allocate(Bank.F0, 4000, "battle messages new location")
 
         # update pointers to messages (leave pointers in d1 bank)

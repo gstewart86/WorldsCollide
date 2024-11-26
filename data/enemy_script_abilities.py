@@ -1,6 +1,7 @@
-from data.spell_names import name_id
-from data.enemy_script_custom_commands import *
 import data.enemy_script_commands as ai_instr
+from data.enemy_script_custom_commands import *
+from data.spell_names import name_id
+
 
 class EnemyScriptAbilities:
     # spell to replace -> randomization category and +tier
@@ -174,11 +175,10 @@ class EnemyScriptAbilities:
         return ability_id
 
     def _scale_spell_instruction(self, instruction, enemy):
-        from data.spell_names import id_name
         instruction.spell_id = self._scale_ability(instruction.spell_id, enemy)
 
     def _scale_random_attack_instruction(self, instruction, enemy):
-        from data.spell_names import id_name
+        pass
 
         instruction.attack1 = self._scale_ability(instruction.attack1, enemy)
         instruction.attack2 = self._scale_ability(instruction.attack2, enemy)

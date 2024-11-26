@@ -1,5 +1,6 @@
 import data.direction as direction
 
+
 class NPC():
     DATA_SIZE = 0x09
 

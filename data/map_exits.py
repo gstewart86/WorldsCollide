@@ -1,4 +1,5 @@
-from data.map_exit import ShortMapExit, LongMapExit
+from data.map_exit import LongMapExit, ShortMapExit
+
 
 class MapExits():
     SHORT_EXIT_COUNT = 0x469

@@ -1,8 +1,8 @@
+import instruction.asm as asm
 from data.dance import Dance
 from data.structures import DataArray
+from memory.space import Allocate, Bank, Read, Reserve, Write
 
-from memory.space import Bank, Reserve, Allocate, Write, Read
-import instruction.asm as asm
 
 class Dances:
     DANCE_COUNT = 8
@@ -62,8 +62,8 @@ class Dances:
         self.is_learner_function = space.start_address_snes
 
     def after_battle_check_mod(self):
-        from memory.space import START_ADDRESS_SNES
         import instruction.c0 as c0
+        from memory.space import START_ADDRESS_SNES
 
         character_available = START_ADDRESS_SNES + c0.character_available
 
@@ -190,7 +190,7 @@ class Dances:
 
     def log(self):
         import data.text as text
-        from log import section_entries, format_option
+        from log import format_option, section_entries
 
         # TODO create abilities class to hold data/names and pass it to dances instead of reading names here
         #      dance abilities are also used by various enemies

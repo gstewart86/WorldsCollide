@@ -1,5 +1,6 @@
-from objectives.results._objective_result import *
 import instruction.f0 as f0
+from objectives.results._objective_result import *
+
 
 def _random_lore_table():
     from constants.lores import id_lore

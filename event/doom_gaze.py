@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class DoomGaze(Event):
     def name(self):
         return "Doom Gaze"

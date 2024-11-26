@@ -1,6 +1,7 @@
-from memory.space import START_ADDRESS_SNES, Bank, Reserve, Write, Read
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import Bank, Read, Reserve, Write
+
 
 class InitialSpells:
     def __init__(self):
@@ -17,8 +18,8 @@ class InitialSpells:
             self.teach_spells()
 
     def teach_spells(self):
-        from data.spells import Spells
         from data.characters import Characters
+        from data.spells import Spells
 
         learned_spells_start = 0x1a6e
         learner_count = Characters.CHARACTER_COUNT - 2 # no gogo/umaro

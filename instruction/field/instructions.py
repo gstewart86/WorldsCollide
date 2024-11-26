@@ -1,7 +1,8 @@
-import data.event_bit as event_bit
-
-from instruction.event import _Instruction, _Branch, _LoadMap, EVENT_CODE_START
 from enum import IntEnum, IntFlag
+
+import data.event_bit as event_bit
+from instruction.event import EVENT_CODE_START, _Branch, _Instruction, _LoadMap
+
 
 class NOP(_Instruction):
     def __init__(self):

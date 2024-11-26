@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class PhantomTrain(Event):
     def name(self):
         return "Phantom Train"

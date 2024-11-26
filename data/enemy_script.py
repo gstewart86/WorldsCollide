@@ -1,5 +1,6 @@
 import data.enemy_script_parser as parser
 
+
 class EnemyScript():
     def __init__(self, id, data):
         self.id = id

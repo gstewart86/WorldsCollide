@@ -1,4 +1,3 @@
-import args
 
 SECTION_WIDTH = 120
 COLUMN_WIDTH = 60
@@ -9,7 +8,8 @@ def separator(label):
     logging.info(get_separator(label))
 
 def columns(lcolumn, rcolumn):
-    import logging, itertools
+    import itertools
+    import logging
     for column in itertools.zip_longest(lcolumn, rcolumn, fillvalue = ""):
         logging.info(f"{column[0]:<{COLUMN_WIDTH}}{column[1]:<{COLUMN_WIDTH}}".rstrip())
 

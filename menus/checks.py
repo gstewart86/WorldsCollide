@@ -1,12 +1,11 @@
-from memory.space import Bank, START_ADDRESS_SNES, Write
+import args
+import constants.objectives.condition_bits as condition_bits
+import data.event_bit as event_bit
 import instruction.asm as asm
 import instruction.f0 as f0
-import args
-
-import data.event_bit as event_bit
-from constants.gates import character_checks
-import constants.objectives.condition_bits as condition_bits
 import menus.pregame_track_scroll_area as scroll_area
+from constants.gates import character_checks
+from memory.space import START_ADDRESS_SNES, Bank, Write
 
 # 0x0002 is not 0xffff after a battle (bug? c2d450), use 0x1202 instead
 constant_ffff = 0x1202 # always contains value 0xffff

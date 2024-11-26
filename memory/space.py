@@ -1,8 +1,8 @@
-from memory.rom import ROM
+from enum import IntEnum
+
 from memory.heap import Heap
 from memory.label import Label, LabelPointer
 
-from enum import IntEnum
 BANK_SIZE = 0x10000
 Bank = IntEnum("Bank", [(f"{value:X}", (value - 0xc0) * BANK_SIZE) for value in range(0xc0, 0x100)])
 

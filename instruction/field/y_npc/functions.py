@@ -1,8 +1,8 @@
-from memory.space import Bank, Allocate, Reserve, Write, Read
 import args
-
 import instruction.field.instructions as field
-from instruction.field.y_npc.instructions import SetYNPCGraphics, YEffect, YNPCEffect
+from instruction.field.y_npc.instructions import (SetYNPCGraphics, YEffect,
+                                                  YNPCEffect)
+from memory.space import Allocate, Bank, Read, Write
 
 DEFAULT_SOUND = 0x4f # lagomorph
 
@@ -123,9 +123,8 @@ def imperial():
     return _graphics_group(possibilities)
 
 def main_character():
-    from data.characters import Characters
     from data.character_sprites import DEFAULT_CHARACTER_SPRITES
-    from data.character_palettes import DEFAULT_CHARACTER_SPRITE_PALETTES
+    from data.characters import Characters
 
     sprites = DEFAULT_CHARACTER_SPRITES[:Characters.CHARACTER_COUNT]
     palettes = args.sprite_palettes

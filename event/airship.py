@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class Airship(Event):
     def name(self):
         return "Airship"

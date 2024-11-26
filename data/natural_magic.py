@@ -1,8 +1,8 @@
+import instruction.asm as asm
 from data.natural_spell import NaturalSpell
 from data.structures import DataArray
+from memory.space import Allocate, Bank, Reserve
 
-from memory.space import Bank, Reserve, Allocate
-import instruction.asm as asm
 
 class NaturalMagic:
     TERRA_SPELL_DATA_START = 0x2ce3c0
@@ -114,6 +114,7 @@ class NaturalMagic:
 
     def mod_learners(self):
         import random
+
         from data.characters import Characters
         possible_learners = list(range(Characters.CHARACTER_COUNT - 2)) # exclude gogo/umaro
 
@@ -206,7 +207,7 @@ class NaturalMagic:
         self.remove_excluded()
 
     def log(self):
-        from log import section, format_option
+        from log import format_option, section
 
         lcolumn = [self.learner1_name]
         if self.args.natural_magic1:

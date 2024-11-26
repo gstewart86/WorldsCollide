@@ -1,13 +1,14 @@
-import menus.pregame_track as pregame_track
-import menus.pregame as pregame
-import menus.track as track
-import menus.dance as dance
-import menus.rage as rage
-import menus.status as status
-import menus.final_lineup as final_lineup
 import menus.coliseum as coliseum
-import menus.sell as sell
+import menus.dance as dance
+import menus.final_lineup as final_lineup
 import menus.magic as magic
+import menus.pregame as pregame
+import menus.pregame_track as pregame_track
+import menus.rage as rage
+import menus.sell as sell
+import menus.status as status
+import menus.track as track
+
 
 class Menus:
     def __init__(self, characters, dances, rages, enemies):
@@ -30,8 +31,8 @@ class Menus:
         self.scrollbar_bugfix()
 
     def scrollbar_bugfix(self):
-        from memory.space import Reserve
         import instruction.asm as asm
+        from memory.space import Reserve
 
         # square hardcoded the vertical scrollbar speed here (0x0070 is the speed for menus with 256 rows, e.g. items)
         # as a result, the scrollbar does not work correctly in menus with between roughly 140 to 230 rows

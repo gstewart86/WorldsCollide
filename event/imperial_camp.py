@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class ImperialCamp(Event):
     def name(self):
         return "Imperial Camp"

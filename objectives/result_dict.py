@@ -1,5 +1,6 @@
 from constants.objectives.results import names as possible_result_names
 
+
 # when testing if a dictionary of results contains a key
 # assert that the result name is possible (e.g. not misspelled/changed/removed)
 class ResultDict(dict):

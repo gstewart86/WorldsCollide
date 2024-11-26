@@ -1,6 +1,7 @@
-from objectives.results._objective_result import *
-from objectives.results._apply_characters_party import ApplyToParty
 import instruction.field.entity as field_entity
+from objectives.results._apply_characters_party import ApplyToParty
+from objectives.results._objective_result import *
+
 
 class Field(field_result.Result):
     def src(self):

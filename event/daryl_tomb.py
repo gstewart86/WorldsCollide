@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class DarylTomb(Event):
     def name(self):
         return "Daryl's Tomb"

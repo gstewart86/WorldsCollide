@@ -1,13 +1,13 @@
+import data.characters_asm as characters_asm
 from data.character import Character
-from data.natural_magic import NaturalMagic
+from data.character_palettes import CharacterPalettes
+from data.character_sprites import CharacterSprites
 from data.commands import Commands
 from data.menu_character_sprites import MenuCharacterSprites
-from data.character_sprites import CharacterSprites
-from data.character_palettes import CharacterPalettes
+from data.natural_magic import NaturalMagic
 from data.party_battle_scripts import PartyBattleScripts
 from data.structures import DataArray
 
-import data.characters_asm as characters_asm
 
 class Characters():
     CHARACTER_COUNT = 14   # 14 playable characters

@@ -1,5 +1,6 @@
 from objectives.conditions._objective_condition import *
 
+
 class Condition(ObjectiveCondition):
     NAME = "Esper"
     def __init__(self, esper):

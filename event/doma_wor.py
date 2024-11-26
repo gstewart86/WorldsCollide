@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class DomaWOR(Event):
     def name(self):
         return "Doma WOR"

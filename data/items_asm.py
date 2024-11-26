@@ -1,8 +1,8 @@
-from memory.space import Bank, Reserve, Write, Read
-import instruction.asm as asm
 
+import instruction.asm as asm
 from data.item_names import name_id
-import random
+from memory.space import Bank, Read, Reserve, Write
+
 
 def stronger_atma_weapon():
     space = Reserve(0x20e59, 0x20e59, "atma weapon divisor exponent")

@@ -1,7 +1,8 @@
-from memory.space import Bank, Allocate, Reserve, Read
-import instruction.field as field
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+import instruction.field as field
+from memory.space import Allocate, Bank, Read, Reserve
+
 
 class Permadeath:
     def __init__(self):

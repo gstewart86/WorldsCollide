@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class Maranda(Event):
     def name(self):
         return "Maranda"

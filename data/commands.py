@@ -1,7 +1,8 @@
-from multiprocessing.sharedctypes import Value
-from constants.commands import *
 import random
+
 import args
+from constants.commands import *
+
 
 class Commands:
     def __init__(self, characters):
@@ -27,6 +28,7 @@ class Commands:
                 pass
 
         from data.characters import Characters
+
         # Give the Moogles for Moogle Defense randomized commands
         # Copy the list minus any exclusions
         possible_moogle_commands = command_list.copy()
@@ -114,8 +116,8 @@ class Commands:
             characters_asm.update_morph_character(self.characters[ : Characters.CHARACTER_COUNT])
 
     def log(self):
-        from log import section, format_option
         from data.characters import Characters
+        from log import format_option, section
 
         lcolumn = []
         for index, option in enumerate(COMMAND_OPTIONS[ : -2]):

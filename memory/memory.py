@@ -1,7 +1,8 @@
+import args
+from memory.free import free
 from memory.rom import ROM
 from memory.space import Space
-from memory.free import free
-import args
+
 
 class Memory:
     def __init__(self):

@@ -1,5 +1,6 @@
-from objectives.results._objective_result import *
 import args
+from objectives.results._objective_result import *
+
 
 def _random_spell_table():
     from constants.spells import spell_id
@@ -22,8 +23,8 @@ def _forget_random_spells():
     # input: 8 bit number of random spells to forget with each character
     # output: all characters forget next given number of spells in random_forget_spelL_table, skips spells not known
 
-    from constants.spells import id_spell
     from constants.entities import id_character
+    from constants.spells import id_spell
 
     learned_start_address = 0x1a6e
     character_count = len(id_character) - 2     # characters except gogo/umaro

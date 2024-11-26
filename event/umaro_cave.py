@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class UmaroCave(Event):
     def name(self):
         return "Umaro's Cave"

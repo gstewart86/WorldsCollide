@@ -1,5 +1,6 @@
 from graphics.palette import Palette
 
+
 class CharacterPalette(Palette):
     def __init__(self, id, data):
         self.id = id

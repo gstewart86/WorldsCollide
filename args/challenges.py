@@ -28,7 +28,8 @@ def parse(parser):
                             help = "Ironmog Mode: You cannot save (but save points still work for Tents/Sleeping Bags)")
 
 def process(args):
-    from constants.spells import black_magic_ids, white_magic_ids, gray_magic_ids, spell_id
+    from constants.spells import (black_magic_ids, gray_magic_ids, spell_id,
+                                  white_magic_ids)
     from data.esper_spell_tiers import top_spells
 
     # If no_ultima is on, add it to our exclude list for downstream use

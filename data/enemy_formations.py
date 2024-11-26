@@ -1,6 +1,7 @@
+import data.bosses as bosses
 from data.enemy_formation import EnemyFormation
 from data.structures import DataArray
-import data.bosses as bosses
+
 
 class EnemyFormations():
     FLAGS_START = 0xf5900
@@ -114,8 +115,9 @@ class EnemyFormations():
         self.formations[bosses.name_formation["Marshal"]].enemy_y_positions[1] -= 2
 
         # Enemy id's are the same as rage IDs.
-        from constants.rages import rage_id
         import random
+
+        from constants.rages import rage_id
         possible_minions = [
             rage_id["Red Wolf"],
             rage_id["Covert"],

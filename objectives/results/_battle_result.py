@@ -1,6 +1,7 @@
-from memory.space import Bank, START_ADDRESS_SNES, Write
 import instruction.asm as asm
+from memory.space import START_ADDRESS_SNES, Bank, Write
 from objectives._cached_function import _CachedFunction
+
 
 class Result(_CachedFunction, asm.JSR):
     def __init__(self, *args, **kwargs):

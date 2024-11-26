@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class PhoenixCave(Event):
     def name(self):
         return "Phoenix Cave"

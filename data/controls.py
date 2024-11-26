@@ -1,7 +1,8 @@
+import instruction.asm as asm
 from data.control import Control
 from data.structures import DataArray
-from memory.space import Reserve, Allocate, Bank, Write
-import instruction.asm as asm
+from memory.space import Allocate, Bank, Reserve, Write
+
 
 class Controls():
     ATTACKS_DATA_START = 0xf3d00
@@ -93,6 +94,7 @@ class Controls():
 
     def enable_control_improved_abilities(self):
         from data.spell_names import name_id
+
         # Ensure that Rage & Special are available (if there are open Controls)
         for control in self.controls:
             # Search for blanks, rages, and specials

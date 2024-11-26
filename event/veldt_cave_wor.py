@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class VeldtCaveWOR(Event):
     def name(self):
         return "Veldt Cave WOR"

@@ -1,14 +1,10 @@
-import objectives.conditions._field_condition as field_condition
-import objectives.conditions._battle_condition as battle_condition
-import objectives.conditions._menu_condition as menu_condition
+from enum import Enum
 
+import objectives.conditions._battle_condition as battle_condition
+import objectives.conditions._field_condition as field_condition
+import objectives.conditions._menu_condition as menu_condition
 from constants.objectives.conditions import name_type
 
-import data.event_bit as event_bit
-import data.battle_bit as battle_bit
-import data.event_word as event_word
-
-from enum import Enum
 ConditionType = Enum("ConditionType", "EventWord EventBit BattleBit Character Esper")
 
 class ObjectiveCondition:

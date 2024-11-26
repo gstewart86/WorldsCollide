@@ -1,5 +1,6 @@
-from objectives.results._objective_result import *
 import instruction.f0 as f0
+from objectives.results._objective_result import *
+
 
 def _random_rage_table():
     from constants.rages import id_rage

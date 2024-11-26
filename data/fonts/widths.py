@@ -1,6 +1,7 @@
 from data.structures import DataArray
 from memory.space import Space
 
+
 class Widths:
     WIDTHS_START = 0x048fc0
     WIDTHS_END = 0x0490bf

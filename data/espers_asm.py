@@ -1,5 +1,6 @@
-from memory.space import Bank, Reserve, Allocate, Write
 import instruction.asm as asm
+from memory.space import Allocate, Bank, Reserve, Write
+
 
 def mastered_mod(espers):
     # Ported with mods from https://www.ff6hacking.com/forums/thread-4181.html

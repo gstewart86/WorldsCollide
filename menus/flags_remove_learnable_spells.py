@@ -1,6 +1,6 @@
-import menus.pregame_track_scroll_area as scroll_area
-from data.text.text2 import text_value
 import instruction.f0 as f0
+import menus.pregame_track_scroll_area as scroll_area
+
 
 class FlagsRemoveLearnableSpells(scroll_area.ScrollArea):
     MENU_NUMBER = 15
@@ -43,7 +43,8 @@ class FlagsRemoveLearnableSpells(scroll_area.ScrollArea):
         return spell_lines
 
     def _get_spell_icon(spell_id):
-        from constants.spells import black_magic_ids, gray_magic_ids, white_magic_ids
+        from constants.spells import (black_magic_ids, gray_magic_ids,
+                                      white_magic_ids)
         from data.text.text2 import text_value
         icon = ''
         if spell_id in black_magic_ids:

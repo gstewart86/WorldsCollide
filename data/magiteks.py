@@ -1,8 +1,7 @@
-from data.magitek import Magitek
 from data.ability_data import AbilityData
+from data.magitek import Magitek
 from data.structures import DataArray
 
-from memory.space import Bank, Reserve, Allocate, Write
 
 class Magiteks:
     MAGITEK_COUNT = 8
@@ -35,7 +34,6 @@ class Magiteks:
 
     def mod(self):
         self.fix_reflectable_beams()
-        pass
 
     def write(self):
         if self.args.spoiler_log:

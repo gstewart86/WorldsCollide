@@ -1,13 +1,14 @@
-from memory.space import Bank, START_ADDRESS_SNES, Reserve, Allocate, Write, Read
+import args
 import instruction.asm as asm
 import instruction.c3 as c3
-import args
-
-import menus.pregame_track_scroll_area as scroll_area
-import menus.objectives as objectives
 import menus.checks as checks
-import menus.progress as progress
 import menus.flags as flags
+import menus.objectives as objectives
+import menus.pregame_track_scroll_area as scroll_area
+import menus.progress as progress
+from memory.space import (START_ADDRESS_SNES, Allocate, Bank, Read, Reserve,
+                          Write)
+
 
 class PreGameTrack:
     # custom fade commands to load hash sprites while fading so sprites do not suddenly appear/disappear
@@ -139,8 +140,8 @@ class PreGameTrack:
         self.decrease_line_height = space.start_address
 
     def draw_labels_mod(self):
-        import version
         import data.text as text
+        import version
 
         version_string = "v" + version.__version__.split(' ')[0] # remove substrings such as ' (dev)'
         text_positions = [

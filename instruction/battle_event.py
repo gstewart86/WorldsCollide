@@ -1,7 +1,7 @@
-from memory.space import START_ADDRESS_SNES, Bank, Reserve, Free, Write, Read
-from instruction.event import _Instruction
 import instruction.asm as asm
-import instruction.c1 as c1
+from instruction.event import _Instruction
+from memory.space import Bank, Read, Reserve, Write
+
 
 def _set_opcode_address(opcode, address):
     opcode_table_address = 0x1fdbe + opcode * 2

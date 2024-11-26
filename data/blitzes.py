@@ -1,8 +1,8 @@
+import instruction.asm as asm
 from data.blitz import Blitz
 from data.structures import DataArray
+from memory.space import Allocate, Bank, Read, Reserve, Write
 
-from memory.space import Bank, Reserve, Allocate, Write, Read
-import instruction.asm as asm
 
 class Blitzes:
     LEVELS_START = 0x26f498
@@ -48,8 +48,8 @@ class Blitzes:
         self.is_learner_function = space.start_address_snes
 
     def event_check_mod(self):
-        from memory.space import START_ADDRESS_SNES
         import instruction.c0 as c0
+        from memory.space import START_ADDRESS_SNES
 
         learn_blitzes = 0x0a201
         character_recruited = c0.character_recruited + START_ADDRESS_SNES

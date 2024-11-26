@@ -1,4 +1,5 @@
 from data.spell_names import name_id
+
 TIER_COUNT = 12 # number of tiers per category
 
 fire = [

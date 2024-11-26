@@ -1,21 +1,16 @@
-from data.map_property import MapProperty
-
-import data.npcs as npcs
-from data.npc import NPC
-
-from data.chests import Chests
-
 import data.map_events as events
-from data.map_event import MapEvent, LongMapEvent
-
 import data.map_exits as exits
-from data.map_exit import ShortMapExit, LongMapExit
-
+import data.npcs as npcs
 import data.world_map_event_modifications as world_map_event_modifications
-from data.world_map import WorldMap
-
 import instruction.asm as asm
+from data.chests import Chests
+from data.map_event import LongMapEvent, MapEvent
+from data.map_exit import LongMapExit, ShortMapExit
+from data.map_property import MapProperty
+from data.npc import NPC
+from data.world_map import WorldMap
 from memory.space import Reserve
+
 
 class Maps():
     MAP_COUNT = 416
@@ -233,9 +228,10 @@ class Maps():
         self.rom.set_bytes(tilemaps_start + tilemap_addr, compressed)
 
     def _fix_Cid_timer_glitch(self):
-        from memory.space import Bank, Write
         import instruction.field as field
         from event.event import EVENT_CODE_START
+        from memory.space import Bank, Write
+
         # If you start Cid's timer and then leave, the timer can affect event tile, NPC and objective triggering
         # Write some LongMapEvents to turn off the Cid timer when exiting to the world map.
         HORIZ = 0

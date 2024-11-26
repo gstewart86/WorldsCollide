@@ -1,6 +1,5 @@
-from memory.space import Bank, Reserve, Allocate, Write
 import instruction.asm as asm
-from data.spell_names import name_id, id_name
+from memory.space import Bank, Reserve, Write
 
 
 class RageMenu:

@@ -1,5 +1,4 @@
 from data.bosses import name_formation
-from constants.objectives.condition_bits import NameBit
 
 boss_objective_ids = [
     name_formation["Air Force"],

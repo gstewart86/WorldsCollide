@@ -1,6 +1,7 @@
 
 from constants.objectives.results import ResultType
 
+
 class ObjectiveMetadata:
     def __init__(self, objective: ResultType, group):
         self.objective = objective

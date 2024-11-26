@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class MtZozo(Event):
     def name(self):
         return "Mt. Zozo"

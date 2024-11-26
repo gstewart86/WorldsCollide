@@ -1,5 +1,6 @@
 from memory.space import Reserve
 
+
 class WorldMap:
     def __init__(self, rom, args):
         self.rom = rom

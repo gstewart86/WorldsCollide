@@ -1,5 +1,6 @@
-from memory.space import Bank, START_ADDRESS_SNES, Space, Reserve, Allocate, Free, Write
 import instruction.asm as asm
+from memory.space import START_ADDRESS_SNES, Bank, Write
+
 
 # Allow Eggers jumps into C3 -- that is, enable calls to JSR routines from other banks
 # Ref: https://www.ff6hacking.com/forums/thread-2301.html

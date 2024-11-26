@@ -1,6 +1,6 @@
-from memory.space import Write, Bank, Reserve
 import instruction.asm as asm
-import args
+from memory.space import Bank, Reserve, Write
+
 
 class MagicMenu:
     def __init__(self):

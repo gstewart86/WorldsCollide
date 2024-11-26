@@ -1,7 +1,8 @@
-from memory.space import Bank, Reserve, Read, Write
+import args
 import data.battle_animation_scripts as battle_animation_scripts
 import instruction.asm as asm
-import args
+from memory.space import Bank, Read, Reserve, Write
+
 
 class Animations:
     def __init__(self):

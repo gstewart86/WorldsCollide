@@ -1,10 +1,7 @@
 import args
-
-from objectives.results import results
-from objectives.conditions import conditions
 from objectives.objective import Objective
-
 from objectives.result_dict import ResultDict
+
 
 class Objectives:
     results = ResultDict()

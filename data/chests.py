@@ -1,7 +1,9 @@
-from data.chest import Chest
-import data.chests_asm as chests_asm
-from data.structures import DataArrays
 import random
+
+import data.chests_asm as chests_asm
+from data.chest import Chest
+from data.structures import DataArrays
+
 
 class Chests():
     PTRS_START = 0x2d82f4
@@ -47,7 +49,7 @@ class Chests():
                                                              chest.id != lone_wolf_chest_id and \
                                                              chest.id != gem_box_chest_id]
 
-        from data.chest_item_tiers import tiers, tier_s_distribution
+        from data.chest_item_tiers import tier_s_distribution, tiers
         self.item_tiers = tiers
 
         # remove excluded items from tiers
@@ -133,6 +135,7 @@ class Chests():
 
     def random_scaled(self):
         import math
+
         from utils.weighted_random import weighted_random
 
         # shuffle the chests to mix up empty/item/gold positions
@@ -195,7 +198,11 @@ class Chests():
         chests_asm.scale_gold(gold_bits, self.gold_contents)
 
     def chest_random_monsters(self, enemy_percent, boss_percent):
-        from data.enemy_battle_groups import event_battle_groups_to_avoid, boss_event_battle_groups, event_battle_group_name, dragon_event_battle_groups, name_event_battle_group
+        from data.enemy_battle_groups import (boss_event_battle_groups,
+                                              dragon_event_battle_groups,
+                                              event_battle_group_name,
+                                              event_battle_groups_to_avoid,
+                                              name_event_battle_group)
         MIAB_noboss = [a for a in range(256) if a not in event_battle_groups_to_avoid.keys() and a not in event_battle_group_name.keys()]
         if self.args.mix_bosses_dragons:
             MIAB_boss = [a for a in range(256) if a in boss_event_battle_groups.keys() or a in dragon_event_battle_groups.keys()]
@@ -329,12 +336,13 @@ class Chests():
         self.chest_data.write()
 
     def log(self):
-        from log import SECTION_WIDTH, section, format_option
-        from data.area_chests import area_chests
-        from data.item_names import id_name
-        from data.item import Item
         from textwrap import wrap
+
+        from data.area_chests import area_chests
         from data.enemy_battle_groups import event_battle_group_name
+        from data.item import Item
+        from data.item_names import id_name
+        from log import SECTION_WIDTH, section
 
         lcolumn = []
         if self.args.chest_contents_random_scaled:

@@ -1,6 +1,7 @@
-from memory.space import Bank, Reserve, Allocate
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import Allocate, Bank, Reserve
+
 
 class DanceMenu:
     def __init__(self, dances):

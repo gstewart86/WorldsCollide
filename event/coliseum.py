@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class Coliseum(Event):
     def name(self):
         return "Coliseum"

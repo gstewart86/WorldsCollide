@@ -1,6 +1,7 @@
 import data.text as text
 from data.status_effects import StatusEffects
 
+
 class Enemy:
     def __init__(self, id, data, name_data, item_data, special_name_data):
         self.id = id

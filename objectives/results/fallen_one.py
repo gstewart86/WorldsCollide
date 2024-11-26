@@ -1,5 +1,6 @@
-from objectives.results._objective_result import *
 from objectives.results._apply_characters_party import ApplyToParty
+from objectives.results._objective_result import *
+
 
 def _set_hp_one():
     current_hp_start = 0x1609

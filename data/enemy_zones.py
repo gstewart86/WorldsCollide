@@ -1,4 +1,5 @@
-from data.enemy_zone import WOBZone, WORZone, MapZone
+from data.enemy_zone import MapZone, WOBZone, WORZone
+
 
 class EnemyZones():
     # world of balance is split into 64 zones

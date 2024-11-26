@@ -1,7 +1,7 @@
-from memory.space import Bank, Reserve, Write
-import instruction.field.instructions as field
-import instruction.field.entity as field_entity
 import data.battle_bit as battle_bit
+import instruction.field.entity as field_entity
+import instruction.field.instructions as field
+from memory.space import Bank, Reserve, Write
 
 RETURN = 0xa5eb3    # return command, used for branching
 END = 0xa5eb4       # end command, used for branching

@@ -1,6 +1,7 @@
-from memory.space import Reserve
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import Reserve
+
 
 class Evade:
     def __init__(self):

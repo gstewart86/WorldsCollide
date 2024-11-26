@@ -1,6 +1,7 @@
-from memory.space import Reserve, Write, Bank, Read
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import Bank, Read, Reserve, Write
+
 
 class YNPC:
     def __init__(self):
@@ -31,8 +32,8 @@ class YNPC:
             )
 
     def interact(self):
-        from memory.space import START_ADDRESS_SNES
         from instruction.field import Y_NPC
+        from memory.space import START_ADDRESS_SNES
         y_npc_event_bytes = (Y_NPC + START_ADDRESS_SNES).to_bytes(3, "little")
 
         from data.characters import Characters

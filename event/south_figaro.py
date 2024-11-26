@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class SouthFigaro(Event):
     def name(self):
         return "South Figaro"

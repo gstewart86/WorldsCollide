@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class Zozo(Event):
     def name(self):
         return "Zozo"
@@ -158,7 +159,8 @@ class Zozo(Event):
         )
 
     def randomize_clock_mod(self):
-        import random, copy
+        import copy
+        import random
         from collections import namedtuple
 
         # original clues:

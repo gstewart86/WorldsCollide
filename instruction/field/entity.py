@@ -1,5 +1,4 @@
 from instruction.event import _Instruction
-from instruction.entity import *
 
 CAMERA, PARTY0, PARTY1, PARTY2, PARTY3 = range(0x30, 0x35)
 

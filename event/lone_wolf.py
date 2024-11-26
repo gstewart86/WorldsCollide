@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class LoneWolf(Event):
     def name(self):
         return "Lone Wolf"

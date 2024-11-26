@@ -1,9 +1,7 @@
-from memory.space import Bank, START_ADDRESS_SNES, Write
 import instruction.asm as asm
 import instruction.f0 as f0
-import args
-
 import menus.pregame_track_scroll_area as scroll_area
+from memory.space import START_ADDRESS_SNES, Bank, Write
 
 # 0x0002 is not 0xffff after a battle (bug? c2d450), use 0x1202 instead
 constant_ffff = 0x1202 # always contains value 0xffff

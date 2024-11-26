@@ -1,6 +1,5 @@
 from memory.space import Reserve
-import instruction.asm as asm
-import args
+
 
 class RandomRNG:
     def __init__(self):

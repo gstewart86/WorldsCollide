@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class Whelk(Event):
     def name(self):
         return "Whelk"

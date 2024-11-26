@@ -1,5 +1,5 @@
-from memory.space import Bank, START_ADDRESS_SNES, Reserve, Allocate, Write
 import instruction.asm as asm
+from memory.space import START_ADDRESS_SNES, Allocate, Bank, Reserve, Write
 
 # 0xf0 custom argument values (e.g. FIRE1 = randomly choose from fire category with tier +1)
 FIRE0, FIRE1, FIRE2, ICE0, ICE1, ICE2, BOLT0, BOLT1, BOLT2, EARTH0, EARTH1, EARTH2, WIND0, WIND1, WIND2, WATER0, WATER1, WATER2, POISON0, POISON1, POISON2, PEARL0, PEARL1, PEARL2, NON_ELEMENTAL0, NON_ELEMENTAL1, NON_ELEMENTAL2 = range(0x36, 0x51)
@@ -69,6 +69,7 @@ class EnemyScriptCommands:
                         ("Phunbaba 3", 1), ("Atma", 1)]
 
         import math
+
         import data.enemy_script_commands as ai_instr
         for enemy_name, check_count in enemy_checks:
             enemy_id = self.enemies.get_enemy(enemy_name)
@@ -101,10 +102,10 @@ class EnemyScriptCommands:
         # for special attacks there are 16 damage tiers in vanilla, this function sets them dynamically
         # tier = min(enemy_level / 4, 11) + (argument offset) + (random offset in range [-2, 2])
 
-        from data.spells import Spells
-        from data.spell_names import name_id
         import data.enemy_ability_tiers as ability_tiers
         import instruction.c4 as c4
+        from data.spell_names import name_id
+        from data.spells import Spells
 
         # max tier reachable based only on enemy level (can be increased further from argument/distortion)
         MAX_ENEMY_LEVEL_TIER = 8

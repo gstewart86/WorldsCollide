@@ -1,5 +1,6 @@
 import data.enemy_script_commands as ai_instr
 
+
 class EnemyScriptDialogs:
     def __init__(self, args, enemy_scripts):
         self.args = args

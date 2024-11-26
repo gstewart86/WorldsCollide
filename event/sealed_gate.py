@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class SealedGate(Event):
     def name(self):
         return "Sealed Gate"

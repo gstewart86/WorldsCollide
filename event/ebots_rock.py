@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class EbotsRock(Event):
     def name(self):
         return "Ebot's Rock"

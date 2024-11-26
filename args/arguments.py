@@ -51,7 +51,8 @@ class Arguments:
         from seed import seed_rng
         self.seed = seed_rng(self.seed, self.seed_rng_flags)
 
-        import sprite_hash, version
+        import sprite_hash
+        import version
         self.sprite_hash = sprite_hash.generate_hash(self.seed + self.seed_rng_flags + version.__version__)
 
         import os
@@ -72,7 +73,8 @@ class Arguments:
             setattr(self, arg_name + "_max", values[1])
 
 if __name__ == "__main__":
-    import os, sys
+    import os
+    import sys
 
     # execute from parent directory for import paths
     sys.path[0] = os.path.join(sys.path[0], os.path.pardir)

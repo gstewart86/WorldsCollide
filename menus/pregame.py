@@ -1,6 +1,8 @@
-from memory.space import START_ADDRESS_SNES, Bank, Write, Reserve, Allocate, Read
 import instruction.asm as asm
 import instruction.c3 as c3
+from memory.space import (START_ADDRESS_SNES, Allocate, Bank, Read, Reserve,
+                          Write)
+
 
 class PreGameMenu:
     MENU_NUMBER = 9

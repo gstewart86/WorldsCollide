@@ -1,10 +1,11 @@
-from objectives.results import results
-from objectives.conditions import conditions
-from objectives._conditions_complete import ConditionsComplete
-from objectives._check_complete import CheckComplete
+import random
 
 import args
-import random
+from objectives._check_complete import CheckComplete
+from objectives._conditions_complete import ConditionsComplete
+from objectives.conditions import conditions
+from objectives.results import results
+
 
 class Objective:
     def __init__(self, id):
@@ -33,9 +34,8 @@ class Objective:
             self.result = results[arg_result.name](*arg_result.args)
             return
 
-        from constants.objectives.results import category_types
-        from constants.objectives.results import name_category
-        from constants.objectives.results import types
+        from constants.objectives.results import (category_types,
+                                                  name_category, types)
 
         category = name_category[arg_result.name]
         if category == "Random":
@@ -56,8 +56,7 @@ class Objective:
         self.result = results[random_type.name](*random_args)
 
     def _init_conditions(self, arg_conditions):
-        from constants.objectives.conditions import types
-        from constants.objectives.conditions import name_type
+        from constants.objectives.conditions import name_type, types
 
         self.conditions = [None] * len(arg_conditions)
 
@@ -120,8 +119,8 @@ class Objective:
 
     @classmethod
     def _init_suplex_train_quest_value(cls):
-        from constants.objectives.conditions import name_type
         from constants.objectives.condition_bits import quest_bit
+        from constants.objectives.conditions import name_type
 
         cls.suplex_train_quest_name = "Suplex A Train"
         for value in name_type["Quest"].value_range:

@@ -1,5 +1,6 @@
-from memory.space import Bank, START_ADDRESS_SNES, Reserve, Allocate, Write
 import instruction.asm as asm
+from memory.space import Allocate, Bank, Reserve
+
 
 def equipable_umaro(character_count):
     space = Reserve(0x31e6f, 0x31e6f, "Compare character id for equipment menu")

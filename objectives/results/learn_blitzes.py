@@ -1,5 +1,6 @@
 from objectives.results._objective_result import *
 
+
 def _random_blitz_table():
     from constants.blitzes import id_blitz
 

@@ -1,6 +1,5 @@
 from data.bosses import BossLocations
 
-
 DEFAULT_DRAGON_PROTOCOL = BossLocations.SHUFFLE
 DEFAULT_STATUE_PROTOCOL = BossLocations.MIX
 def name():

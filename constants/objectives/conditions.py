@@ -1,8 +1,10 @@
-from constants.objectives.condition_bits import check_bit, quest_bit, boss_bit, dragon_bit
+from collections import namedtuple
+
 from constants.entities import id_character
 from constants.espers import id_esper
+from constants.objectives.condition_bits import (boss_bit, check_bit,
+                                                 dragon_bit, quest_bit)
 
-from collections import namedtuple
 ConditionType = namedtuple("ConditionType", ["name", "string_function", "value_range", "min_max"])
 
 types = [

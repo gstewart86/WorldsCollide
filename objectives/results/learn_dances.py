@@ -1,5 +1,6 @@
 from objectives.results._objective_result import *
 
+
 def _random_dance_table():
     from constants.dances import id_dance
 

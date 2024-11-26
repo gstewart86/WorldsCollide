@@ -1,5 +1,7 @@
-from objectives.conditions._objective_condition import *
 import random
+
+from objectives.conditions._objective_condition import *
+
 
 class Condition(ObjectiveCondition):
     NAME = "Dragons"

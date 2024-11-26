@@ -1,6 +1,6 @@
-from instruction.event import _Instruction, _Branch, _LoadMap
-from instruction.entity import *
 import data.event_bit as event_bit
+from instruction.event import _Branch, _Instruction, _LoadMap
+
 
 class SubmergeFigaroCastle(_Instruction):
     def __init__(self):

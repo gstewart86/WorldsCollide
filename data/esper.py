@@ -1,7 +1,7 @@
-from data.ability_data import AbilityData
-import data.text as text
 
-from enum import IntFlag
+import data.text as text
+from data.ability_data import AbilityData
+
 
 class Esper(AbilityData):
     NO_BONUS = 0xff
@@ -133,6 +133,7 @@ class Esper(AbilityData):
 
     def randomize_rates_tiered(self):
         import random
+
         from data.esper_spell_tiers import tiers
         for spell_index in range(self.spell_count):
             if self.spells[spell_index].id in tiers[0]:
@@ -154,6 +155,7 @@ class Esper(AbilityData):
 
     def randomize_bonus(self):
         import random
+
         # exclude lvl percent bonuses
         possible = [self.HP_10_PERCENT, self.HP_30_PERCENT, self.HP_50_PERCENT, self.MP_10_PERCENT,
                     self.MP_30_PERCENT, self.MP_50_PERCENT, self.HP_100_PERCENT, self.STRENGTH_1, self.STRENGTH_2,

@@ -1,12 +1,11 @@
-import args, random
+import random
+
+import args
+import data.items_asm as items_asm
+from constants.items import name_id
 from data.item import Item
 from data.structures import DataList
 
-from constants.items import good_items, stronger_items, premium_items
-from constants.items import id_name, name_id
-
-import data.items_asm as items_asm
-import data.text as text
 
 class Items():
     ITEM_COUNT = 256
@@ -125,7 +124,6 @@ class Items():
         if percent == 0:
             return
 
-        from data.characters import Characters
         percent = percent / 100.0
         for item in self.items:
             if item.is_equipable() and item.id != self.EMPTY and type_condition(item.type):
@@ -211,9 +209,9 @@ class Items():
 
     def moogle_starting_equipment(self):
         # Give the moogles in Moogle Defense starting armor and helmets. Keeping vanilla weapons
-        from data.shop_item_tiers import tiers
-        from data.item import Item
         from data.characters import Characters
+        from data.item import Item
+        from data.shop_item_tiers import tiers
 
         for index in range(Characters.FIRST_MOOGLE, Characters.LAST_MOOGLE + 1):
             self.characters.characters[index].init_body = random.choice(tiers[Item.ARMOR][1])
@@ -349,6 +347,7 @@ class Items():
             exclude.append(name_id["Illumina"])
 
         from data.movement import AUTO_SPRINT, B_DASH
+
         # Sprint Shoes are a literal dead item if any of these options
         if self.args.no_sprint_shoes or self.args.movement in [AUTO_SPRINT, B_DASH]:
             exclude.append(name_id["Sprint Shoes"])

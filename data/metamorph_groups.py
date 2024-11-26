@@ -1,7 +1,8 @@
+import args
+from data.item_names import name_id
 from data.metamorph_group import MetamorphGroup
 from data.structures import DataArray
-from data.item_names import name_id
-import args
+
 
 class MetamorphGroups:
     DATA_START = 0x047f40

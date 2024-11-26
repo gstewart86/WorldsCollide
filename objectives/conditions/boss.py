@@ -1,6 +1,7 @@
-from objectives.conditions._objective_condition import *
 from constants.objectives.condition_bits import boss_bit
 from data.bosses import name_formation, name_pack
+from objectives.conditions._objective_condition import *
+
 
 class Condition(ObjectiveCondition):
     NAME = "Boss"

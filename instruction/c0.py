@@ -1,6 +1,8 @@
-from memory.space import Bank, Reserve, Allocate, Free, Write, Read, START_ADDRESS_SNES
-import instruction.asm as asm
 import args
+import instruction.asm as asm
+from memory.space import (START_ADDRESS_SNES, Allocate, Bank, Free, Read,
+                          Reserve, Write)
+
 
 # replace vanilla commands with calls to extracted functions
 def _extract_original(original_start, original_end):

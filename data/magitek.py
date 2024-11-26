@@ -1,5 +1,6 @@
-from data.ability_data import AbilityData
 import data.text as text
+from data.ability_data import AbilityData
+
 
 class Magitek(AbilityData):
     def __init__(self, id, name_data, ability_data):

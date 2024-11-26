@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class NarsheBattle(Event):
     def name(self):
         return "Narshe Battle"

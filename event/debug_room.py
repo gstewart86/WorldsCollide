@@ -1,6 +1,7 @@
-from event.event import *
 from data.npc import NPC
+from event.event import *
 from music.song_utils import get_character_theme
+
 
 class DebugRoom(Event):
     # Using the 3 Scenarios room as our debug map
@@ -54,7 +55,6 @@ class DebugRoom(Event):
 
     def _add_teleport_npc(self, source_map, source_x, source_y, direction, dest_map, dest_x, dest_y):
         # Test code to add a Marshal battle NPC to Blackjack
-        from data.bosses import name_pack
         src = [
             field.LoadMap(dest_map, direction, True, dest_x, dest_y, fade_in = True),
             field.Return(),

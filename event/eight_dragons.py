@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class EightDragons(Event):
     def name(self):
         return "8 Dragons"

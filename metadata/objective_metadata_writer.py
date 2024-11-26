@@ -15,7 +15,8 @@ CONDITION_NAME_LENGTH = 31
 class ObjectiveMetadataWriter:
     def __init__(self):
         from constants.objectives.conditions import types as condition_types
-        from constants.objectives.results import types as result_types, name_category
+        from constants.objectives.results import name_category
+        from constants.objectives.results import types as result_types
 
         self.objectives = [ObjectiveMetadata(result_type, name_category[result_type.name]) for result_type in result_types]
         self.conditions = [ObjectiveConditionMetadata(condition_types.index(condition_type), condition_type) for condition_type in condition_types]
@@ -36,7 +37,8 @@ class ObjectiveMetadataWriter:
         return metadata
 
     def write(self):
-        import json        
+        import json
+
         import args
         file_name = f"{args.output_file}"
         metadata = self.get_objective_metadata()

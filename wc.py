@@ -1,7 +1,5 @@
 def main():
     import args
-    import log
-
     from memory.memory import Memory
     memory = Memory()
 

@@ -1,5 +1,6 @@
 import data.text as text
 
+
 class SwdTech:
     NAME_SIZE = 12
 

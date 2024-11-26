@@ -1,6 +1,7 @@
 from data.shop import Shop
 from data.structures import DataArray
 
+
 class Shops():
     DATA_START = 0x47ac0
     DATA_END = 0x47f3f
@@ -53,8 +54,8 @@ class Shops():
         }
         type_items[Shop.ITEM].extend(type_items[Shop.VENDOR])
 
-        import random
         import collections
+        import random
         for shop_type in range(1, Shop.SHOP_TYPE_COUNT - 1): # skip EMPTY and VENDOR shop types
             frequencies = collections.Counter(item for item in type_items[shop_type])
             items = sorted(type_items[shop_type], key = lambda item : frequencies[item])
@@ -81,8 +82,9 @@ class Shops():
     def random_tiered(self):
         def get_item(item_type, exclude = None):
             import random
-            from utils.weighted_random import weighted_random
+
             from data.shop_item_tiers import tiers, weights
+            from utils.weighted_random import weighted_random
 
             if exclude is None:
                 exclude = []
@@ -235,8 +237,8 @@ class Shops():
     def disable_buy_if_empty(self):
         # in shops with no items scrolling breaks and you can buy "Empty" items
         # this function will not allow the buy menu to be selected if the shop type is empty
-        from memory.space import Bank, Reserve, Write
         import instruction.asm as asm
+        from memory.space import Bank, Reserve, Write
 
         src = [
             asm.LDX(0x67, asm.DIR),         # x = shop index
@@ -272,7 +274,7 @@ class Shops():
         self.remove_excluded_items()
 
     def log(self):
-        from log import section_entries, format_option
+        from log import format_option, section_entries
 
         lentries = []
         rentries = []

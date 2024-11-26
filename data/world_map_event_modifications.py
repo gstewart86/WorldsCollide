@@ -1,5 +1,6 @@
 from data.world_map_event_modification import WorldMapEventModification
 
+
 class WorldMapEventModifications:
     WOB_MODIFICATIONS_COUNT = 15
     WOR_MODIFICATIONS_COUNT = 3

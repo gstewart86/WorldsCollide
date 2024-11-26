@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class CidIsland(Event):
     def name(self):
         return "Cid's Island"

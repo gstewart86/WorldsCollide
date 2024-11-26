@@ -1,9 +1,10 @@
-from data.esper import Esper
-from data.ability_data import AbilityData
-from data.structures import DataArray
+import random
 
 import data.espers_asm as espers_asm
-import random
+from data.ability_data import AbilityData
+from data.esper import Esper
+from data.structures import DataArray
+
 
 class Espers():
     ESPER_COUNT = 27
@@ -123,7 +124,8 @@ class Espers():
 
     def randomize_spells_tiered(self):
         def get_spell():
-            from data.esper_spell_tiers import tiers, weights, tier_s_distribution
+            from data.esper_spell_tiers import (tier_s_distribution, tiers,
+                                                weights)
             from utils.weighted_random import weighted_random
 
             random_tier = weighted_random(weights)
@@ -269,8 +271,8 @@ class Espers():
         self.espers[self.PHOENIX].status4 = 0x04
 
     def multi_summon(self):
-        from memory.space import Reserve
         import instruction.asm as asm
+        from memory.space import Reserve
 
         space = Reserve(0x24da3, 0x24da5, "espers set used in battle bit", asm.NOP())
 
@@ -356,8 +358,9 @@ class Espers():
         return self.esper_names[esper]
 
     def log(self):
-        from log import COLUMN_WIDTH, section_entries, format_option
         from textwrap import wrap
+
+        from log import COLUMN_WIDTH, format_option, section_entries
 
         lentries = []
         rentries = []

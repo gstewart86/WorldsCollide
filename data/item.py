@@ -1,6 +1,7 @@
 import data.text as text
 from data.text.text2 import text_value, value_text
 
+
 class Item():
     NAME_LENGTH = 13
     NAMES_START_ADDR = 0x12b300

@@ -1,8 +1,7 @@
-from event.event import *
 import data.npc_bit as npc_bit
-from constants.entities import character_id
-import data.direction
 from data.npc import NPC
+from event.event import *
+
 
 class NarsheMoogleDefense(Event):
     WOB_MAP_ID = 0x33

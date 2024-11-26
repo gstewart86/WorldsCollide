@@ -1,11 +1,11 @@
+import data.bosses as bosses
 from data.enemy import Enemy
-from data.structures import DataArray
-
 from data.enemy_formations import EnemyFormations
 from data.enemy_packs import EnemyPacks
-from data.enemy_zones import EnemyZones
 from data.enemy_scripts import EnemyScripts
-import data.bosses as bosses
+from data.enemy_zones import EnemyZones
+from data.structures import DataArray
+
 
 class Enemies():
     DATA_START = 0xf0000
@@ -93,6 +93,7 @@ class Enemies():
 
     def remove_fenix_downs(self):
         import random
+
         from data.item_names import name_id
 
         fenix_down = name_id["Fenix Down"]
@@ -235,6 +236,7 @@ class Enemies():
 
     def shuffle_encounters(self, maps):
         import collections
+
         # find all packs that are randomly encountered in zones
         packs = collections.OrderedDict()
         for zone in self.zones.zones:
@@ -315,6 +317,7 @@ class Enemies():
 
     def shuffle_steals_drops_random(self):
         import random
+
         from data.bosses import final_battle_enemy_name
 
         # Assemble the list of steals and drops

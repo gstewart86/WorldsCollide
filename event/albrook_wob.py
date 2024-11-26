@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class AlbrookWOB(Event):
     def name(self):
         return "Albrook WOB"

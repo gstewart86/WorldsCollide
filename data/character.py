@@ -1,5 +1,6 @@
 import data.text as text
 
+
 class Character():
     # every 2 seconds while running in battle the character's run value is incremented by a
     # random number from 1 to run_success. Once it reaches battle's threshold (and atb full) the character runs

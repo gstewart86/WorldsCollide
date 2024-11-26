@@ -1,5 +1,6 @@
 from event.event import *
 
+
 class OwzerMansion(Event):
     def name(self):
         return "Owzer Mansion"
